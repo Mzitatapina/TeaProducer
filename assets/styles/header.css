@@ -1,0 +1,461 @@
+@import url("//cdn.web-fonts.ge/fonts/alk-rounded-mtav-med/css/alk-rounded-mtav-med.min.css");
+
+
+
+/* ttf font  */
+
+@font-face {
+    font-family: 'dejavu';
+    src: url('/Gurieli/assets/font/dejavu.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* mobile menu fade in animations  */
+@keyframes menuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+@keyframes menuFadOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 1040px) {
+    .nav.active .nav-item {
+        animation: menuFadeIn 0.5s ease forwards;
+        opacity: 0; 
+        transform: 1s;
+    }
+    .nav .nav-item {
+        animation: menuFadeOut 0.5s ease forwards;
+        opacity: 0; 
+        transform: 1s;
+    }
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 50px;
+    padding-left: 140px;
+    border-bottom: 1px solid white;
+    position: fixed;
+    z-index: 1;
+    width: calc(100% - 90px);
+    /* margin-left: 90px; */
+    z-index: 20;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative; 
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.nav-item a.active,
+.dropdown-item a.active {
+    color: #97A52F;
+}
+
+.nav-item.active > a,
+.dropdown-item.active > a {
+    color: #97A52F;
+}
+.navbar li a:hover {
+    color: #97A52F;
+}
+.dropdown {
+    background: transparent;
+}
+.nav-item:hover .dropdown,
+.child-list {
+    display: block;
+}
+.nav-item:hover .dropdown {
+    position: absolute;
+    width: 250px;
+    top: 70px;
+    left: -61px;
+    transition: all .4;
+}
+
+
+
+.dropdown, .child-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.child-list {
+    display: block;
+    left: 100%; 
+    top: 0;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+
+.navbar.inside-nav {
+    background: white;
+    width: 100%;
+    margin-left: 0;
+}
+
+.navbar.inside-nav  .nav-item > a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar.inside-nav  .nav-item a.active,
+.dropdown-item a.active {
+    color: #97A52F;
+}
+
+.navbar.inside-nav  .nav-item.active > a,
+.navbar.inside-nav  .dropdown-item.active > a {
+    color: #97A52F;
+}
+
+.navbar.inside-nav.green {
+    background-color: #EDEDEB;
+    border-bottom: 3px solid rgb(209, 207, 207);
+}
+.nav-item {
+    padding: 24px 0;
+}
+.nav-item a {
+    font-size: 17px;
+}
+.dropdown-item:hover .navbar .child-list {
+    transition: .4s;
+}
+.dropdown-item:hover .navbar .child-list {
+    display: flex;
+    left: 10px;
+    color: white;
+    flex-direction: column;
+    gap: 0;
+}
+.child-list {
+    gap: 0;
+}
+
+.navbar.inside-nav .child-list a {
+    color: white;
+}
+.nav-item li a {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    padding-right: 0;
+    font-size: 17px;
+}
+.dropdown-item li a {
+    padding-left: 35px;
+}
+.navbar .nav-item a:hover {
+    color: var(--green);
+}
+.inside-nav .bar {
+    background-color: #333131;
+}
+.navbar.inside-nav.green .menu-toggle .bar {
+    background-color: #b9b9b9;
+}
+
+.lang-switch.header-lang {
+    display: none;
+}
+
+
+  /* responsive  */
+  @media only screen and (max-width: 1375px) {
+    .navbar {
+      padding-left: 75px;
+    }
+  }
+
+  @media (max-width: 1040px) {
+    .navbar {
+        margin: 0;
+        width: 100%;
+        padding: 0 35px;
+        padding-left: 0;
+    }
+    .nav {
+        display: none;
+        width: 100%;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 30px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        padding: 0;
+    }
+
+    .nav-item a {
+        margin: 0;
+        text-align: center;
+        padding: 15px 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        color: white;
+        text-align: left;
+        border-bottom: 1px solid #373732;
+    }
+
+    .nav-item  {
+       padding: 0;
+       margin: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; 
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+    .nav-item .dropdown, .nav-item:hover .dropdown {
+        position: relative;
+        display: block;
+        width: auto;
+        top: 0;
+        left: 0;
+        text-align: left;
+        transition: all .4;
+    }
+    .nav-item .dropdown a {
+        padding-left: 55px;
+        background: black;
+    }
+    .nav-item > a {
+        padding-left: 40px;
+    }
+    .child-list li a {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .nav-item .dropdown .child-list a {
+        padding-left: 70px;
+    }
+    .nav-list {
+        gap: 0px;
+        background: rgb(22, 22, 22);
+        height: 100vh;
+        overflow: scroll;
+        padding-top: 20px;
+        padding-bottom: 120px;
+    }
+    .navbar {
+        height: 70px;
+    }
+    .navbar.inside-nav .nav-item > a {
+        color: white;
+    }
+   
+    .lang-switch.header-lang {
+        display: block;
+        position: absolute;
+        right: 85px;
+        top: 23px;
+    }
+    .lang-switch.header-lang a {
+        color: white;
+    }
+    .navbar.inside-nav .lang-switch.header-lang a {
+        color: #545454;
+        font-weight: 600;
+    }
+    .navbar.inside-nav .lang-switch.header-lang a.active {
+        color:#97A52F;
+    }
+    .logo img {
+        width: 150px;
+    } 
+    .logo  {
+        width: 150px;
+        margin-left: 15px;
+    } 
+}
+
+
+@media (min-width: 300px) and (max-width: 360px) {
+    .logo img {
+        width: 130px;
+    } 
+    .logo  {
+        width: 130px;
+    } 
+    
+    .navbar {
+        padding: 0 15px;
+    }
+    .menu-toggle {
+        right: 15px;
+    }
+    .lang-switch.header-lang {
+        right: 60px;
+    }
+    .lang-switch.header-lang a {
+        margin: 2px;
+    }
+}
+
+
+@media (min-width: 200px) and (max-width: 300px) {
+    .logo img {
+        width: 100px;
+    } 
+    .logo  {
+        width: 100px;
+    } 
+    .lang-switch.header-lang a {
+        margin: 1px;
+    } 
+    .lang-switch.header-lang {
+        right: 50px;
+    }
+    .navbar {
+        padding: 0 15px;
+    }
+    .menu-toggle {
+        right: 15px;
+    }
+}
+
+
+.nav-list a {
+    /* albertius medium  */
+    font-family: 'Albertus Medium', serif;
+}
+
+
+.lang-switch.header-lang-desktop {
+    display: none;
+}
+
+
+
+@media (min-width: 1040px) {
+    .lang-switch.header-lang-desktop {
+        display: flex;
+        height: 70px;
+        background-color: rgb(97, 92, 92);
+        align-items: center;
+        justify-content: space-evenly;
+        width: 130px;
+    }
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+    .header-left a {
+        color: white;
+    }
+    .header-left  a.active {
+        color: #97A52F;
+    }
+    .header-left .logo {
+        margin-left: 50px;
+    }
+
+
+  }
+  .dropdown li a {
+    margin-top: 1px; 
+}
+ 
+
+
+
+.georgian-font a, .georgian-font h1, .georgian-font h2, .georgian-font h3, .georgian-font h4, .georgian-font h5, .georgian-font h6, .georgian-font button, .georgian-font .heading  {
+    font-family: "ALK Rounded Mtav Med", sans-serif !important;
+}
+.georgian-font h1, .georgian-font h2, .georgian-font h3, .georgian-font h4, .georgian-font h5, .georgian-font h6 {
+    font-weight: 400 !important;
+}
+.georgian-font p {
+   font-family: 'dejavu' !important;
+   font-size: 16px !important;
+}
+.about-statistics .guria * {
+    font-family: 'Agraham', sans-serif !important;
+}
+
+.lang-switch a {
+    font-family: "Playfair Display" !important;
+    font-weight: 600;
+}

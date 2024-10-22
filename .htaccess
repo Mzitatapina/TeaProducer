@@ -1,0 +1,17 @@
+RewriteEngine On
+
+ErrorDocument 404 /404.php
+
+# Redirect from 404 page to the homepage after 3 seconds
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^404.php$ /404.php [L]
+</IfModule>
+
+# Remove .php extension and "pages" directory from URLs
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L]
+
+RewriteRule ^pagetitle/([^/]+)$ /pages/$1.php [L]

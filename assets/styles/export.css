@@ -1,0 +1,127 @@
+.export .content {
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 100px 15px;
+}
+
+.content-slider.export::before {
+    display: none;
+}
+.content-slider.export {
+    background-position: bottom;
+    background-size: auto 400px;
+    background-repeat: no-repeat;
+}
+
+.country-chain {
+    display: flex;
+    gap: 60px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.country-chain .circle {
+    width: 26px;
+    height: 26px; 
+    border-radius: 50%;
+    background-color: #1aaf84;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.country-chain .box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.country-chain h3 {
+    font-family: 'Albertus Medium', sans-serif;
+    font-weight: 900;
+    color: #535353;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+.country-chain .circle::before {
+    content: "";
+    position: absolute;
+    top: 21%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    z-index: -1;
+    height: 10px;
+    background-color: white;
+}
+
+.country-chain .circle-1::before {
+    background-color: transparent;
+}
+
+
+.export-txts {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content .export-txts .heading  { 
+    color: #101010 !important;
+}
+
+
+@media only screen and (max-width: 1140px) {
+    .country-chain {
+        max-width: 1000px;
+    }
+ 
+}
+
+@media only screen and (max-width: 1140px) {
+    .country-chain {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .export .content img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .country-chain .circle-1::before {
+        display: none;
+    }
+    .country-chain .circle::before {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .country-chain {
+        gap: 15px;
+        justify-content: space-evenly;
+    }
+    .country-chain  .box {
+        width: 100px;
+    }
+    .country-chain h3 {
+        margin: 3px 0;
+    }
+    .export .content {
+        top: 0;
+        padding-bottom: 30px;
+    }
+   .country-chain .txt {
+        font-size: 12px;
+    }
+}
+
+
+

@@ -1,0 +1,269 @@
+@import url('https://fonts.cdnfonts.com/css/agraham');    
+
+.navbar {
+    margin: 0;
+    width: 100%;
+    border-color: #565656;
+    position: fixed;
+}
+
+.history-section.about {
+    padding: 0;
+    padding-top: 70px;
+}
+.about-head-img {
+    height: 80px;
+    width: 100%;
+}
+
+.about-head-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.history-section .history-heading {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.history-txt {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.history-txt p {
+    max-width: 530px;
+    text-align: justify;
+}
+
+.about-first-bg {
+    width: 100%;
+    margin-top: -230px;
+    position: relative;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.about-first-bg p {
+    max-width: 544px;
+    width: 100%; 
+    padding: 10px;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.about-first-bg div {
+    display: flex;
+    max-width: 1160px;
+    justify-content: flex-end;
+    height: 100%;
+    margin: 0 auto;
+    align-items: flex-end;
+}
+.about-sec-bg {
+    width: 100%;
+}
+.about-sec-bg img {
+    width: 100%;
+}
+
+
+
+.about-statistics {
+    display: flex;
+    width: 100%;
+}
+.about-statistic-bg {
+    width: 100%;
+    max-width: 978px;
+    height: 244px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    color: white;
+    font-family: 'Agraham', sans-serif;
+    font-weight: 100;
+    position: relative;
+}
+
+/* awards  */
+.awards {
+    height: auto;
+    width: 100%;
+    display: flex;
+    background-color: #333333;
+    flex-direction: column;
+    padding: 100px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.awards-txts {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.awards p {
+    color: white;
+}
+
+.awards h3 {
+    font-family: 'Agraham', sans-serif;
+    margin: 0;
+    color: white;
+    font-size: 23px;
+}
+.private-labels {
+    text-align: right;
+    margin-top: 100px;
+    padding-left: 100px;
+}
+
+ @media (max-width: 1300px) { 
+    .awards {
+        padding: 20px 15px;
+        background-image: none !important;
+    }
+    .awards-txts {  
+        max-width: 100%;
+        text-align: left;
+    }
+    .private-labels {
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .awards .txt {
+        padding: 0;
+    }
+    .awards h3 {
+        font-size: 15px;
+    }
+    
+} 
+
+
+.about-statistic-bg img {
+    width: 100%;
+}
+
+.about-statistics .guria {
+    width: 238px;
+    height: auto;
+    margin-top: -4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about-statistics .guria h1 {
+    font-size: 48px;
+}
+
+.about-statistics .guria * {
+    font-family: 'Agraham', sans-serif;
+}
+.guria-txts {
+    transform: rotate(-90deg);
+}
+
+.about-statistics-wrap {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.about-statistics-wrap .txt {
+    max-width: 978px;
+    width: 100%;
+    padding-top: 30px;
+}
+.statistics-items {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.statistics-items .statistic-item p {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.about-awards h3 {
+    font-family: 'Agraham', sans-serif;
+}
+.history-txt.about-awards {
+    padding: 0 10px;
+    text-align: justify;
+    max-width: 1160px;
+}
+
+ .about-awards {
+    color: #838080;
+}
+.about-awards h3 {
+    color: var(--black);
+}
+
+
+
+@media only screen and (max-width: 1040px) {
+    .history-section.about {
+        padding: 0;
+        padding-top: 70px;
+    }
+    .history-section .history-heading {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .about-statistics {
+        flex-wrap: wrap;
+    }
+    .about-statistics .guria {
+        width: 100%;
+        /* background-image: none !important; */
+        /* background-color: #9f9f9f; */
+    }
+    .guria-txts {
+        transform: rotate(0deg);
+    }
+    .about-statistics .guria-txts h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+    .about-statistics .guria-txts h4 {
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .about-first-bg {
+        margin-top: -90px;
+        height: 500px;
+        z-index: -1;
+    }
+    p, .about-first-bg p {
+        padding: 0 14px;
+    }
+    .about-statistics {
+        padding: 0;
+    }
+}
+
+
+
